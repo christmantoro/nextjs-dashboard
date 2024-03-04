@@ -10,6 +10,7 @@ import {
 import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
+import { links } from '@/app/links'
 import { ReactElement, JSXElementConstructor, ReactNode, PromiseLikeOfReactNode, Key } from 'react';
 import { UrlObject } from 'url';
 
