@@ -1,29 +1,38 @@
-"use client";
+'use client';
 
 import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
-
-
-import { usePathname } from 'next/navigation';
-
 import Link from 'next/link';
-import { links } from '@/app/links'
-import { ReactElement, JSXElementConstructor, ReactNode, PromiseLikeOfReactNode, Key } from 'react';
-import { UrlObject } from 'url';
-
+import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-// ...
+const links = [
+  {
+    name: 'Dashboard',
+    href: '/dashboard',
+    icon: HomeIcon,
+  },
+  {
+    name: 'Customers',
+    href: '/dashboard/customers',
+    icon: UserGroupIcon,
+  },
+  {
+    name: 'Invoices',
+    href: '/dashboard/invoices',
+    icon: DocumentDuplicateIcon,
+  },
+];
 
 export default function NavLinks() {
   const pathname = usePathname();
 
   return (
     <>
-      {links.map((link: { icon: any; name: boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | PromiseLikeOfReactNode | Key | null | undefined; href: string | UrlObject; }) => {
+      {links.map((link) => {
         const LinkIcon = link.icon;
         return (
           <Link

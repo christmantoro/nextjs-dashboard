@@ -1,5 +1,7 @@
+import React from 'react';
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts/fonts';
+
 
 export default function RootLayout({
   children,
@@ -12,3 +14,4 @@ export default function RootLayout({
     </html>
   );
 }
+
