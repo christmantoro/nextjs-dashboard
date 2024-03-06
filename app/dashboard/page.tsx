@@ -4,7 +4,7 @@ import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitana } from '@/app/ui/fonts/fonts';
 import { fetchRevenue, fetchLatestInvoices, fetchCardData } from '@/app/lib/data';
 import { couldStartTrivia } from 'typescript';
-import CardWrapper from '@/app/ui/dashboard/cards';
+
 
 
 export default async function Page() {
